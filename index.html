@@ -708,7 +708,7 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), 
-                        url('https://i.ibb.co/KcsJFpQ0/Whats-App-Image-2026-01-23-at-2-14-54-PM.jpg" alt="Whats-App-Image-2026-01-23-at-2-14-54-PM');
+                        url('https://i.ibb.co/KcsJFpQ0/Whats-App-Image-2026-01-23-at-2-14-54-PM.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -1423,71 +1423,71 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="https://i.ibb.co/HTRYMX4k/R-6-removebg-preview.png" alt="R-6-removebg-preview">
-                <div class="logo-text">MILANO Enterprise Sdn.Bhd.<span></div>
-                </div>
+                <!-- Added id="mainLogo" for seasonal logo switching -->
+                <img id="mainLogo" src="https://i.ibb.co/HTRYMX4k/R-6-removebg-preview.png" alt="MILANO Logo">
+                <div class="logo-text">MILANO Enterprise Sdn.Bhd.<span></span></div>
             </div>
         </div>
     </header>
 
     <!-- Floating Action Buttons -->
-<div class="floating-buttons">
-    <!-- Theme Toggle Button - Now above WhatsApp button -->
-    <button class="floating-theme" id="themeToggle">
-        <i class="fas fa-moon" id="themeIcon"></i>
-        <span class="theme-tooltip" id="themeTooltip">Change Theme</span>
-        <div class="theme-dropdown" id="themeDropdown">
-            <div class="theme-option" data-theme="light">
-                <i class="fas fa-sun"></i>
-                <span>Light Mode</span>
+    <div class="floating-buttons">
+        <!-- Theme Toggle Button - Now above WhatsApp button -->
+        <button class="floating-theme" id="themeToggle">
+            <i class="fas fa-moon" id="themeIcon"></i>
+            <span class="theme-tooltip" id="themeTooltip">Change Theme</span>
+            <div class="theme-dropdown" id="themeDropdown">
+                <div class="theme-option" data-theme="light">
+                    <i class="fas fa-sun"></i>
+                    <span>Light Mode</span>
+                </div>
+                <div class="theme-option" data-theme="dark">
+                    <i class="fas fa-moon"></i>
+                    <span>Dark Mode</span>
+                </div>
+                <div class="theme-option" data-theme="auto">
+                    <i class="fas fa-adjust"></i>
+                    <span>Auto (System)</span>
+                </div>
             </div>
-            <div class="theme-option" data-theme="dark">
-                <i class="fas fa-moon"></i>
-                <span>Dark Mode</span>
-            </div>
-            <div class="theme-option" data-theme="auto">
-                <i class="fas fa-adjust"></i>
-                <span>Auto (System)</span>
-            </div>
-        </div>
-    </button>
-    
-    <!-- WhatsApp Button - Updated with tooltip -->
-    <a href="https://wa.me/60106583343" class="floating-whatsapp" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-        <span class="whatsapp-tooltip" id="whatsappTooltip">WhatsApp Kami</span>
-    </a>
-    
-    <!-- Phone Call Button -->
-    <a href="tel:+60106583343" class="floating-phone">
-        <i class="fas fa-phone"></i>
-        <span class="phone-tooltip">Call Us</span>
-    </a>
-    
-    <!-- Language Button -->
-    <div class="floating-language" id="floatingLanguageBtn">
-        <i class="fas fa-globe"></i>
-        <span class="language-tooltip" id="languageTooltip">Change Language</span>
-        <div class="language-floating-dropdown" id="floatingLanguageDropdown">
-            <div class="floating-language-option" data-lang="en">
-                <span class="language-flag">🇺🇸</span>
-                <span>English</span>
-            </div>
-            <div class="floating-language-option" data-lang="ms">
-                <span class="language-flag">🇲🇾</span>
-                <span>Bahasa Melayu</span>
-            </div>
-            <div class="floating-language-option" data-lang="zh">
-                <span class="language-flag">🇨🇳</span>
-                <span>中文</span>
-            </div>
-            <div class="floating-language-option" data-lang="ta">
-                <span class="language-flag">🇮🇳</span>
-                <span>தமிழ்</span>
+        </button>
+        
+        <!-- WhatsApp Button - Updated with tooltip -->
+        <a href="https://wa.me/60106583343" class="floating-whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-tooltip" id="whatsappTooltip">WhatsApp Kami</span>
+        </a>
+        
+        <!-- Phone Call Button -->
+        <a href="tel:+60106583343" class="floating-phone">
+            <i class="fas fa-phone"></i>
+            <span class="phone-tooltip">Call Us</span>
+        </a>
+        
+        <!-- Language Button -->
+        <div class="floating-language" id="floatingLanguageBtn">
+            <i class="fas fa-globe"></i>
+            <span class="language-tooltip" id="languageTooltip">Change Language</span>
+            <div class="language-floating-dropdown" id="floatingLanguageDropdown">
+                <div class="floating-language-option" data-lang="en">
+                    <span class="language-flag">🇺🇸</span>
+                    <span>English</span>
+                </div>
+                <div class="floating-language-option" data-lang="ms">
+                    <span class="language-flag">🇲🇾</span>
+                    <span>Bahasa Melayu</span>
+                </div>
+                <div class="floating-language-option" data-lang="zh">
+                    <span class="language-flag">🇨🇳</span>
+                    <span>中文</span>
+                </div>
+                <div class="floating-language-option" data-lang="ta">
+                    <span class="language-flag">🇮🇳</span>
+                    <span>தமிழ்</span>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -3127,6 +3127,97 @@
                 }
             });
         }
+
+        // ===== SEASONAL LOGO MANAGEMENT (Auto change for festivals) =====
+        const holidayLogos = {
+            cny: 'https://i.ibb.co/MyMHC5x4/Chat-GPT-Image-Mar-12-2026-11-12-17-AM-removebg-preview.png',
+            raya: 'https://i.ibb.co/RTn95q3n/Whats-App-Image-2026-03-12-at-10-58-40-AM-removebg-preview.png',
+            deepavali: 'https://i.ibb.co/236xQKT1/Chat-GPT-Image-Mar-12-2026-11-15-16-AM-removebg-preview.png',
+            christmas: 'https://i.ibb.co/Df3Qhtwp/Chat-GPT-Image-Mar-12-2026-11-12-20-AM-removebg-preview.png',
+            normal: 'https://i.ibb.co/HTRYMX4k/R-6-removebg-preview.png'
+        };
+
+        // Holiday date definitions for years 2025-2030 (expand as needed)
+        const holidayDates = {
+            cny: {
+                2025: { month: 1, day: 29 },
+                2026: { month: 2, day: 17 },
+                2027: { month: 2, day: 6 },
+                2028: { month: 1, day: 26 },
+                2029: { month: 2, day: 13 },
+                2030: { month: 2, day: 3 }
+            },
+            raya: {
+                2025: { month: 3, day: 31 },
+                2026: { month: 3, day: 20 },
+                2027: { month: 3, day: 10 },
+                2028: { month: 2, day: 27 },
+                2029: { month: 2, day: 15 },
+                2030: { month: 2, day: 5 }
+            },
+            deepavali: {
+                2025: { month: 10, day: 20 },
+                2026: { month: 11, day: 8 },
+                2027: { month: 10, day: 28 },
+                2028: { month: 11, day: 14 },
+                2029: { month: 11, day: 3 },
+                2030: { month: 10, day: 24 }
+            },
+            christmas: {
+                2025: { month: 12, day: 25 },
+                2026: { month: 12, day: 25 },
+                2027: { month: 12, day: 25 },
+                2028: { month: 12, day: 25 },
+                2029: { month: 12, day: 25 },
+                2030: { month: 12, day: 25 }
+            }
+        };
+
+        function getHolidayDate(holiday, year) {
+            if (!holidayDates[holiday] || !holidayDates[holiday][year]) return null;
+            const { month, day } = holidayDates[holiday][year];
+            return new Date(year, month - 1, day); // month is 0-index in JS
+        }
+
+        function isWithinWeek(date, targetDate) {
+            const oneWeek = 7 * 24 * 60 * 60 * 1000; // 7 days in milliseconds
+            const diff = Math.abs(date - targetDate);
+            return diff <= oneWeek;
+        }
+
+        function getSeasonalLogo() {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0); // normalize to midnight for comparison
+
+            // Check each holiday
+            for (let holiday of ['cny', 'raya', 'deepavali', 'christmas']) {
+                // Check previous year, current year, next year to cover cross‑year periods
+                for (let offset = -1; offset <= 1; offset++) {
+                    const year = today.getFullYear() + offset;
+                    const holidayDate = getHolidayDate(holiday, year);
+                    if (holidayDate) {
+                        holidayDate.setHours(0, 0, 0, 0);
+                        if (isWithinWeek(today, holidayDate)) {
+                            return holidayLogos[holiday];
+                        }
+                    }
+                }
+            }
+            return holidayLogos.normal;
+        }
+
+        function updateSeasonalLogo() {
+            const logoImg = document.getElementById('mainLogo');
+            if (logoImg) {
+                const newSrc = getSeasonalLogo();
+                logoImg.src = newSrc;
+            }
+        }
+
+        // Call on DOM ready
+        document.addEventListener('DOMContentLoaded', updateSeasonalLogo);
+        // Also call on load in case DOMContentLoaded already fired
+        window.addEventListener('load', updateSeasonalLogo);
     </script>
 </body>
 </html>
