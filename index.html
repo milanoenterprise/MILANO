@@ -2693,6 +2693,13 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         window.addEventListener('load', function() {
             checkLanguagePreference();
             checkThemePreference();
+            
+            // ---------- TikTok Pixel Event: ViewContent (add after load) ----------
+            ttq.track('ViewContent', {
+                content_type: 'webpage',
+                content_name: 'MILANO Loan Application Page'
+            });
+            
             setTimeout(() => {
                 phoneInput.focus();
             }, 100);
@@ -2912,6 +2919,13 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                 
                 // Show success message
                 successMessage.style.display = 'block';
+
+                // ---------- TikTok Pixel Event: SubmitForm ----------
+                ttq.track('SubmitForm', {
+                    content_name: 'Loan Application',
+                    content_category: 'Financial Service'
+                });
+                // -------------------------------------
                 
                 // Scroll to success message
                 successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
