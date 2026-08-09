@@ -2694,9 +2694,10 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             checkLanguagePreference();
             checkThemePreference();
             
-            // ---------- TikTok Pixel Event: ViewContent (add after load) ----------
+            // ---------- TikTok Pixel Event: ViewContent (fixed) ----------
             ttq.track('ViewContent', {
-                content_type: 'webpage',
+                content_id: window.location.href,
+                content_type: 'product',
                 content_name: 'MILANO Loan Application Page'
             });
             
