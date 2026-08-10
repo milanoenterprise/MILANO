@@ -1212,6 +1212,26 @@
             background-color: rgba(0, 0, 0, 0.7);
         }
 
+        /* Style for date input hint */
+        .date-hint {
+            font-size: 12px;
+            color: var(--text-color);
+            opacity: 0.7;
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .date-hint i {
+            color: var(--accent-color);
+        }
+        .date-hint strong {
+            background: var(--age-highlight-bg);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
         @media (max-width: 992px) {
             .hero h1 {
                 font-size: 36px;
@@ -1671,9 +1691,14 @@
                         </select>
                     </div>
                     
+                    <!-- Date of Birth Field - Free text input, no validation -->
                     <div class="form-group">
                         <label for="tarikhLahir" id="dobLabel">TARIKH LAHIR:</label>
-                        <input type="date" id="tarikhLahir" class="form-control" required>
+                        <input type="text" id="tarikhLahir" class="form-control" placeholder="Contoh: 1972/05/29">
+                        <div class="date-hint">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Masukkan tarikh lahir (contoh: <strong>1972/05/29</strong> atau sebarang format)</span>
+                        </div>
                     </div>
                     
                     <div class="form-group">
@@ -2046,6 +2071,8 @@
                 stateLabel: "STATE:",
                 stateDefault: "Please select state",
                 dobLabel: "DATE OF BIRTH:",
+                dobPlaceholder: "Example: 1972/05/29",
+                dobHint: "Enter date of birth (example: <strong>1972/05/29</strong> or any format)",
                 epfLabel: "EPF SAVINGS AMOUNT (RM):",
                 epfPlaceholder: "Example: 35000",
                 epfHint: "* Minimum savings RM30,000 required",
@@ -2145,6 +2172,8 @@
                 stateLabel: "NEGERI:",
                 stateDefault: "Sila pilih negeri",
                 dobLabel: "TARIKH LAHIR:",
+                dobPlaceholder: "Contoh: 1972/05/29",
+                dobHint: "Masukkan tarikh lahir (contoh: <strong>1972/05/29</strong> atau sebarang format)",
                 epfLabel: "JUMLAH SIMPANAN KWSP (RM):",
                 epfPlaceholder: "Contoh: 35000",
                 epfHint: "* Simpanan minimum RM30,000 diperlukan",
@@ -2244,6 +2273,8 @@
                 stateLabel: "州属：",
                 stateDefault: "请选择州属",
                 dobLabel: "出生日期：",
+                dobPlaceholder: "示例: 1972/05/29",
+                dobHint: "输入出生日期 (示例: <strong>1972/05/29</strong> 或任何格式)",
                 epfLabel: "公积金储蓄金额（令吉）：",
                 epfPlaceholder: "示例：35000",
                 epfHint: "* 需要最低储蓄RM30,000",
@@ -2343,6 +2374,8 @@
                 stateLabel: "மாநிலம்:",
                 stateDefault: "தயவுசெய்து மாநிலத்தைத் தேர்ந்தெடுக்கவும்",
                 dobLabel: "பிறந்த தேதி:",
+                dobPlaceholder: "எடுத்துக்காட்டு: 1972/05/29",
+                dobHint: "பிறந்த தேதியை உள்ளிடவும் (எடுத்துக்காட்டு: <strong>1972/05/29</strong> அல்லது எந்த வடிவமைப்பிலும்)",
                 epfLabel: "EPF சேமிப்புத் தொகை (RM):",
                 epfPlaceholder: "எடுத்துக்காட்டு: 35000",
                 epfHint: "* குறைந்தபட்ச சேமிப்பு RM30,000 தேவை",
@@ -2459,6 +2492,8 @@
             document.getElementById('stateLabel').textContent = langData.stateLabel;
             document.getElementById('stateDefault').textContent = langData.stateDefault;
             document.getElementById('dobLabel').textContent = langData.dobLabel;
+            document.getElementById('tarikhLahir').placeholder = langData.dobPlaceholder;
+            document.querySelector('.date-hint span').innerHTML = langData.dobHint;
             document.getElementById('epfLabel').textContent = langData.epfLabel;
             document.getElementById('simpananKWSP').placeholder = langData.epfPlaceholder;
             document.getElementById('epfHint').textContent = langData.epfHint;
@@ -2669,7 +2704,7 @@
             const nama = document.getElementById('nama').value.trim();
             const telefon = getFullPhoneNumber();
             const negeri = document.getElementById('negeri').value;
-            const tarikhLahir = document.getElementById('tarikhLahir').value;
+            const tarikhLahir = document.getElementById('tarikhLahir').value.trim();
             const simpananKWSP = document.getElementById('simpananKWSP').value;
             const catatan = document.getElementById('catatan').value.trim();
             
@@ -2687,21 +2722,6 @@
                 return;
             }
             
-            const birthDate = new Date(tarikhLahir);
-            const today = new Date();
-            let age = today.getFullYear() - birthDate.getFullYear();
-            const monthDiff = today.getMonth() - birthDate.getMonth();
-            
-            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-                age--;
-            }
-            
-            const formattedDate = new Date(tarikhLahir).toLocaleDateString('ms-MY', {
-                day: 'numeric',
-                month: 'long',
-                year: 'numeric'
-            });
-            
             submitBtn.disabled = true;
             submitText.style.display = 'none';
             loadingSpinner.style.display = 'inline-block';
@@ -2712,8 +2732,7 @@
                     nama: nama,
                     telefon: telefon,
                     negeri: negeri,
-                    tarikhLahir: formattedDate,
-                    umur: age,
+                    tarikhLahir: tarikhLahir || 'Tidak diisi',
                     simpananKWSP: simpananKWSP,
                     catatan: catatan,
                     status: 'Baru',
@@ -2731,12 +2750,12 @@
                     body: JSON.stringify(formData)
                 });
                 
-                // ===== META PIXEL: LEAD EVENT (FORM SUBMISSION) - FIXED WITH VALUE =====
+                // ===== META PIXEL: LEAD EVENT (FORM SUBMISSION) =====
                 if (typeof fbq !== 'undefined') {
                     fbq('track', 'Lead', {
                         content_name: 'Loan Application',
                         content_category: 'Financial Service',
-                        value: 1.00,           // ← THIS FIXES THE ISSUE!
+                        value: 1.00,
                         currency: 'MYR'
                     });
                 }
@@ -2753,8 +2772,7 @@
                                       `*NAMA:* ${nama}%0A` +
                                       `*NO TELEFON:* ${telefon}%0A` +
                                       `*NEGERI:* ${negeri}%0A` +
-                                      `*TARIKH LAHIR:* ${formattedDate}%0A` +
-                                      `*UMUR:* ${age} tahun%0A` +
+                                      `*TARIKH LAHIR:* ${tarikhLahir || 'Tidak diisi'}%0A` +
                                       `*SIMPANAN KWSP:* RM${parseInt(simpananKWSP).toLocaleString('ms-MY')}%0A` +
                                       (catatan ? `*CATATAN:* ${catatan}%0A` : '') +
                                       `%0A*Permohonan ini dihantar melalui borang atas talian MQIRAD dan telah disimpan ke sistem kami.*`;
@@ -2769,8 +2787,7 @@
                     phoneInput.value = '';
                     delete phoneInput.dataset.rawDigits;
                     phoneInput.classList.remove('valid', 'invalid');
-                    const defaultDate = new Date(today.getFullYear() - 30, today.getMonth(), today.getDate());
-                    document.getElementById('tarikhLahir').value = defaultDate.toISOString().split('T')[0];
+                    document.getElementById('tarikhLahir').value = '';
                     window.open(whatsappURL, '_blank');
                 }, 2000);
                 
@@ -2783,8 +2800,7 @@
                                       `*NAMA:* ${nama}%0A` +
                                       `*NO TELEFON:* ${telefon}%0A` +
                                       `*NEGERI:* ${negeri}%0A` +
-                                      `*TARIKH LAHIR:* ${formattedDate}%0A` +
-                                      `*UMUR:* ${age} tahun%0A` +
+                                      `*TARIKH LAHIR:* ${tarikhLahir || 'Tidak diisi'}%0A` +
                                       `*SIMPANAN KWSP:* RM${parseInt(simpananKWSP).toLocaleString('ms-MY')}%0A` +
                                       (catatan ? `*CATATAN:* ${catatan}%0A` : '') +
                                       `%0A*Permohonan ini dihantar melalui borang atas talian MQIRAD.*`;
@@ -2828,15 +2844,6 @@
                 });
             }
         });
-
-        // ===== DATE RANGE =====
-        const today = new Date();
-        const minDate = new Date(today.getFullYear() - 100, today.getMonth(), today.getDate());
-        const maxDate = new Date(today.getFullYear() + 1, today.getMonth(), today.getDate());
-        document.getElementById('tarikhLahir').setAttribute('max', maxDate.toISOString().split('T')[0]);
-        document.getElementById('tarikhLahir').setAttribute('min', minDate.toISOString().split('T')[0]);
-        const defaultDate = new Date(today.getFullYear() - 30, today.getMonth(), today.getDate());
-        document.getElementById('tarikhLahir').value = defaultDate.toISOString().split('T')[0];
 
         // ===== TESTIMONIAL SLIDER =====
         const sliderContainer = document.getElementById('sliderContainer');
