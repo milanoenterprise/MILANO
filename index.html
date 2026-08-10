@@ -53,7 +53,6 @@
     <!-- TikTok Pixel Code End -->
     
     <style>
-        /* ALL YOUR EXISTING CSS STYLES HERE - KEEP AS IS */
         * {
             margin: 0;
             padding: 0;
@@ -63,7 +62,6 @@
         }
 
         :root {
-            /* Light Mode Colors */
             --primary-color: #2c3e50;
             --accent-color: #3498db;
             --secondary-color: #e74c3c;
@@ -84,7 +82,6 @@
             --phone-prefix-bg: #f8f9fa;
         }
 
-        /* Dark Mode Colors */
         [data-theme="dark"] {
             --primary-color: #e0e0e0;
             --accent-color: #64b5f6;
@@ -120,7 +117,6 @@
             padding: 0 20px;
         }
 
-        /* Floating Action Buttons */
         .floating-buttons {
             position: fixed;
             bottom: 20px;
@@ -132,7 +128,6 @@
             align-items: flex-end;
         }
 
-        /* Theme Toggle Button */
         .floating-theme {
             background-color: var(--accent-color);
             color: white;
@@ -190,7 +185,6 @@
             right: 75px;
         }
 
-        /* Theme Dropdown */
         .theme-dropdown {
             position: absolute;
             bottom: 70px;
@@ -241,7 +235,6 @@
             text-align: center;
         }
 
-        /* WhatsApp Button */
         .floating-whatsapp {
             background-color: #25D366;
             color: white;
@@ -300,7 +293,6 @@
             right: 75px;
         }
 
-        /* Language Button */
         .floating-language {
             background-color: var(--primary-color);
             color: var(--light-color);
@@ -358,7 +350,6 @@
             right: 75px;
         }
         
-        /* Language Dropdown for Floating Button */
         .language-floating-dropdown {
             position: absolute;
             bottom: 70px;
@@ -472,7 +463,6 @@
             }
         }
 
-        /* Mobile Responsive Styles for Floating Buttons */
         @media (max-width: 768px) {
             .floating-buttons {
                 bottom: 15px;
@@ -585,7 +575,6 @@
             }
         }
 
-        /* Touch-friendly improvements */
         @media (hover: none) and (pointer: coarse) {
             .floating-theme,
             .floating-whatsapp,
@@ -596,7 +585,6 @@
             }
         }
 
-        /* Language Modal Styles */
         .language-modal {
             position: fixed;
             top: 0;
@@ -682,7 +670,6 @@
             font-style: italic;
         }
        
-        /* Header Styles */
         header {
             background-color: var(--card-bg);
             box-shadow: 0 2px 10px var(--shadow-color);
@@ -736,12 +723,10 @@
             color: var(--accent-color);
         }
 
-        /* Mobile Header Styles */
         .mobile-header {
             display: none;
         }
 
-        /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), 
                         url('https://i.ibb.co/KcsJFpQ0/Whats-App-Image-2026-01-23-at-2-14-54-PM.jpg');
@@ -811,7 +796,6 @@
             font-weight: 500;
         }
 
-        /* Main Content */
         .content-section {
             padding: 60px 0;
         }
@@ -881,7 +865,6 @@
             color: var(--text-color);
         }
 
-        /* Form Styles */
         .application-form {
             background-color: var(--gray-color);
             color: var(--text-color);
@@ -974,7 +957,6 @@
             cursor: not-allowed;
         }
 
-        /* Success/Error Messages */
         .message {
             padding: 15px;
             border-radius: 5px;
@@ -994,7 +976,6 @@
             border: 1px solid #f5c6cb;
         }
 
-        /* Loading Spinner */
         .spinner {
             display: inline-block;
             width: 20px;
@@ -1009,7 +990,6 @@
             to { transform: rotate(360deg); }
         }
 
-        /* Testimonials */
         .testimonials {
             background-color: var(--gray-color);
             padding: 60px 0;
@@ -1065,7 +1045,6 @@
             border: 1px solid var(--border-color);
         }
 
-        /* Map */
         .map-container {
             margin: 40px 0;
             border-radius: 8px;
@@ -1074,7 +1053,6 @@
             border: 1px solid var(--border-color);
         }
 
-        /* Footer */
         footer {
             background-color: var(--footer-bg);
             color: white;
@@ -1111,7 +1089,6 @@
             font-size: 14px;
         }
 
-        /* Phone Input Styles */
         .phone-input-container {
             display: flex;
             align-items: center;
@@ -1163,7 +1140,6 @@
             font-weight: 700;
         }
 
-        /* Testimonial Slider */
         .testimonial-slider {
             position: relative;
             overflow: hidden;
@@ -1236,7 +1212,6 @@
             background-color: rgba(0, 0, 0, 0.7);
         }
 
-        /* Responsive */
         @media (max-width: 992px) {
             .hero h1 {
                 font-size: 36px;
@@ -1606,7 +1581,6 @@
         <section style="margin-top: 60px;">
             <h2 class="section-title" id="applicationTitle">Permohonan Atas Talian</h2>
             
-            <!-- Messages -->
             <div id="successMessage" class="message success-message" style="display: none;">
                 <i class="fas fa-check-circle"></i> <span id="successText">Permohonan anda berjaya dihantar! Data telah disimpan ke sistem kami.</span>
             </div>
@@ -2221,7 +2195,6 @@
                 hoursSunday: "Ahad & Cuti Umum: Tutup",
                 copyrightText: "&copy; 2023 MILANO ENTERPRISE SDN BHD. Hak Cipta Terpelihara."
             },
-            // ... (zh and ta translations remain the same, omitted for brevity)
             zh: {
                 modalTitle: "请选择您的语言",
                 modalNote: "您可以使用浮动按钮随时更改语言",
@@ -2589,7 +2562,6 @@
             });
             
             // Meta Pixel Event: PageView is already tracked
-            // Add ViewContent for better tracking
             if (typeof fbq !== 'undefined') {
                 fbq('track', 'ViewContent', {
                     content_name: 'MILANO Loan Application Page',
@@ -2759,20 +2731,23 @@
                     body: JSON.stringify(formData)
                 });
                 
-                // ===== META PIXEL: LEAD EVENT (FORM SUBMISSION) =====
+                // ===== META PIXEL: LEAD EVENT (FORM SUBMISSION) - FIXED WITH VALUE =====
                 if (typeof fbq !== 'undefined') {
                     fbq('track', 'Lead', {
                         content_name: 'Loan Application',
                         content_category: 'Financial Service',
+                        value: 1.00,           // ← THIS FIXES THE ISSUE!
                         currency: 'MYR'
                     });
                 }
                 
                 // TikTok Pixel Event
-                ttq.track('SubmitForm', {
-                    content_name: 'Loan Application',
-                    content_category: 'Financial Service'
-                });
+                if (typeof ttq !== 'undefined') {
+                    ttq.track('SubmitForm', {
+                        content_name: 'Loan Application',
+                        content_category: 'Financial Service'
+                    });
+                }
                 
                 const whatsappMessage = `*PERMOHONAN PINJAMAN KWSP - MQIRAD*%0A%0A` +
                                       `*NAMA:* ${nama}%0A` +
@@ -2829,7 +2804,6 @@
 
         // ===== WHATSAPP & PHONE CLICK TRACKING (META PIXEL) =====
         document.addEventListener('DOMContentLoaded', function() {
-            // Track WhatsApp button clicks
             const whatsappBtn = document.getElementById('whatsappButton');
             if (whatsappBtn) {
                 whatsappBtn.addEventListener('click', function() {
@@ -2842,7 +2816,6 @@
                 });
             }
 
-            // Track Phone button clicks
             const phoneBtn = document.getElementById('phoneButton');
             if (phoneBtn) {
                 phoneBtn.addEventListener('click', function() {
@@ -2857,10 +2830,12 @@
         });
 
         // ===== DATE RANGE =====
+        const today = new Date();
         const minDate = new Date(today.getFullYear() - 100, today.getMonth(), today.getDate());
         const maxDate = new Date(today.getFullYear() + 1, today.getMonth(), today.getDate());
         document.getElementById('tarikhLahir').setAttribute('max', maxDate.toISOString().split('T')[0]);
         document.getElementById('tarikhLahir').setAttribute('min', minDate.toISOString().split('T')[0]);
+        const defaultDate = new Date(today.getFullYear() - 30, today.getMonth(), today.getDate());
         document.getElementById('tarikhLahir').value = defaultDate.toISOString().split('T')[0];
 
         // ===== TESTIMONIAL SLIDER =====
@@ -2912,7 +2887,6 @@
             }, 5000);
         }
 
-        // Touch support
         let touchStartX = 0;
         let touchEndX = 0;
 
