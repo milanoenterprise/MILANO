@@ -1770,10 +1770,45 @@
             document.getElementById('mainContent').scrollTo({ top: 0, behavior: 'smooth' });
         }
 
+        // ----- 路由集成 -----
+        const routeMap = {
+            '/': 'main',
+            '/ira': 'ira',
+            '/juju': 'juju'
+        };
+
+        function navigateTo(path) {
+            const page = routeMap[path] || 'main';
+            switchPage(page);
+            if (window.location.pathname !== path) {
+                window.history.pushState({ page }, '', path);
+            }
+        }
+
+        // 监听浏览器前进/后退
+        window.addEventListener('popstate', function(event) {
+            const path = window.location.pathname;
+            const page = routeMap[path] || 'main';
+            switchPage(page);
+        });
+
+        // 页面加载时根据 URL 初始化
+        window.addEventListener('DOMContentLoaded', function() {
+            const path = window.location.pathname;
+            // 处理可能带尾部斜杠的情况，如 /ira/
+            const normalized = path.replace(/\/+$/, '') || '/';
+            const page = routeMap[normalized] || 'main';
+            switchPage(page);
+        });
+
+        // 重写菜单点击事件
         menuItems.forEach(item => {
             item.addEventListener('click', function() {
                 const page = this.getAttribute('data-page');
-                if (page) switchPage(page);
+                if (page) {
+                    const path = page === 'main' ? '/' : '/' + page;
+                    navigateTo(path);
+                }
             });
         });
 
@@ -3135,7 +3170,7 @@
         window.addEventListener('load', function() {
             checkLanguagePreference();
             checkThemePreference();
-            switchPage('main');
+            // 页面加载时路由已在 DOMContentLoaded 中处理，这里不再重复切换
             closeSidebar();
         });
     </script>
