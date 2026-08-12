@@ -11,20 +11,29 @@
 
     <!-- Meta Pixel Code -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1282605647137147');
-    fbq('track', 'PageView');
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1282605647137147');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1282605647137147&ev=PageView&noscript=1"
-    /></noscript>
+            src="https://www.facebook.com/tr?id=1282605647137147&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
 
     <!-- Favicon -->
@@ -33,21 +42,36 @@
     <link rel="icon" type="image/png" sizes="96x96" href="https://i.ibb.co/HTRYMX4k/R-6-removebg-preview.png">
     <link rel="apple-touch-icon" href="https://i.ibb.co/HTRYMX4k/R-6-removebg-preview.png">
     <link rel="shortcut icon" href="https://i.ibb.co/32F2gbG/R-5-removebg-preview.png">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- TikTok Pixel Code Start -->
     <script>
-    !function (w, d, t) {
-      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-    var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-    ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-      ttq.load('D7O3J6BC77U471PH0J5G');
-      ttq.page();
-    }(window, document, 'ttq');
+        ! function(w, d, t) {
+            w.TiktokAnalyticsObject = t;
+            var ttq = w[t] = w[t] || [];
+            ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias",
+                "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"
+            ], ttq.setAndDefer = function(t, e) { t[e] = function() { t.push([e].concat(Array.prototype.slice.call(
+                        arguments, 0))) } };
+            for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
+            ttq.instance = function(t) { for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) ttq
+                    .setAndDefer(e, ttq.methods[n]); return e }, ttq.load = function(e, n) { var r =
+                    "https://analytics.tiktok.com/i18n/pixel/events.js",
+                    o = n && n.partner;
+                ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = r, ttq._t = ttq._t || {}, ttq._t[e] = +
+                    new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {};
+                n = document.createElement("script");
+                n.type = "text/javascript", n.async = !0, n.src = r + "?sdkid=" + e + "&lib=" + t;
+                e = document.getElementsByTagName("script")[0];
+                e.parentNode.insertBefore(n, e)
+            };
+            ttq.load('D7O3J6BC77U471PH0J5G');
+            ttq.page();
+        }(window, document, 'ttq');
     </script>
     <!-- TikTok Pixel Code End -->
-    
+
     <style>
         /* ===== Reset & Variables ===== */
         * {
@@ -228,7 +252,7 @@
             position: absolute;
             top: 18px;
             right: 16px;
-            background: rgba(255,255,255,0.08);
+            background: rgba(255, 255, 255, 0.08);
             border: none;
             color: #fff;
             width: 36px;
@@ -241,7 +265,7 @@
             justify-content: center;
         }
         .sidebar-close-btn:hover {
-            background: rgba(255,255,255,0.18);
+            background: rgba(255, 255, 255, 0.18);
         }
         .sidebar.open .sidebar-close-btn {
             display: flex;
@@ -628,13 +652,185 @@
             right: 75px;
         }
 
+        /* ===== NEW SOCIAL FLOATING BUTTONS ===== */
+        .floating-facebook {
+            background-color: #1877F2;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            box-shadow: 0 4px 20px rgba(24, 119, 242, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            position: relative;
+        }
+        .floating-facebook:hover {
+            background-color: #1664d9;
+            transform: scale(1.1);
+        }
+        .facebook-tooltip {
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        .facebook-tooltip:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -5px;
+            transform: translateY(-50%);
+            border-left: 5px solid var(--primary-color);
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+        }
+        .floating-facebook:hover .facebook-tooltip,
+        .floating-facebook:active .facebook-tooltip {
+            opacity: 1;
+            visibility: visible;
+            right: 75px;
+        }
+
+        .floating-instagram {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            box-shadow: 0 4px 20px rgba(225, 48, 108, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            position: relative;
+        }
+        .floating-instagram:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 28px rgba(225, 48, 108, 0.55);
+        }
+        .instagram-tooltip {
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        .instagram-tooltip:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -5px;
+            transform: translateY(-50%);
+            border-left: 5px solid var(--primary-color);
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+        }
+        .floating-instagram:hover .instagram-tooltip,
+        .floating-instagram:active .instagram-tooltip {
+            opacity: 1;
+            visibility: visible;
+            right: 75px;
+        }
+
+        .floating-tiktok {
+            background-color: #000000;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            position: relative;
+            border: 2px solid rgba(37, 244, 238, 0.3);
+        }
+        .floating-tiktok:hover {
+            transform: scale(1.1);
+            border-color: #25F4EE;
+            box-shadow: 0 4px 24px rgba(37, 244, 238, 0.3);
+        }
+        .tiktok-tooltip {
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        .tiktok-tooltip:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -5px;
+            transform: translateY(-50%);
+            border-left: 5px solid var(--primary-color);
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+        }
+        .floating-tiktok:hover .tiktok-tooltip,
+        .floating-tiktok:active .tiktok-tooltip {
+            opacity: 1;
+            visibility: visible;
+            right: 75px;
+        }
+
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
         @keyframes slideUp {
-            from { opacity: 0; transform: translateY(50px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* ===== HEADER ===== */
@@ -671,8 +867,8 @@
 
         /* ===== HERO ===== */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), 
-                        url('https://i.ibb.co/KcsJFpQ0/Whats-App-Image-2026-01-23-at-2-14-54-PM.jpg');
+            background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+                url('https://i.ibb.co/KcsJFpQ0/Whats-App-Image-2026-01-23-at-2-14-54-PM.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -768,19 +964,23 @@
             margin-bottom: 15px;
             font-size: 22px;
         }
-        .benefits-list, .eligibility-list {
+        .benefits-list,
+        .eligibility-list {
             list-style-type: none;
         }
-        .benefits-list li, .eligibility-list li {
+        .benefits-list li,
+        .eligibility-list li {
             padding: 10px 0;
             border-bottom: 1px solid var(--border-color);
             display: flex;
             align-items: center;
         }
-        .benefits-list li:last-child, .eligibility-list li:last-child {
+        .benefits-list li:last-child,
+        .eligibility-list li:last-child {
             border-bottom: none;
         }
-        .benefit-icon, .eligibility-icon {
+        .benefit-icon,
+        .eligibility-icon {
             color: var(--accent-color);
             margin-right: 15px;
             font-size: 18px;
@@ -890,13 +1090,15 @@
             display: inline-block;
             width: 20px;
             height: 20px;
-            border: 3px solid rgba(255,255,255,.3);
+            border: 3px solid rgba(255, 255, 255, .3);
             border-radius: 50%;
             border-top-color: white;
             animation: spin 1s ease-in-out infinite;
         }
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .testimonials {
@@ -1020,9 +1222,15 @@
             font-size: 18px;
             z-index: 10;
         }
-        .slider-btn.prev { left: 10px; }
-        .slider-btn.next { right: 10px; }
-        .slider-btn:hover { background-color: rgba(0, 0, 0, 0.7); }
+        .slider-btn.prev {
+            left: 10px;
+        }
+        .slider-btn.next {
+            right: 10px;
+        }
+        .slider-btn:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
 
         .phone-input-container {
             display: flex;
@@ -1104,7 +1312,8 @@
             margin-bottom: 20px;
             color: white;
         }
-        .footer-section p, .footer-section li {
+        .footer-section p,
+        .footer-section li {
             margin-bottom: 10px;
             color: #ddd;
         }
@@ -1121,9 +1330,15 @@
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 992px) {
-            .hero h1 { font-size: 36px; }
-            .hero-subtitle { font-size: 20px; }
-            .highlight-box p { font-size: 18px; }
+            .hero h1 {
+                font-size: 36px;
+            }
+            .hero-subtitle {
+                font-size: 20px;
+            }
+            .highlight-box p {
+                font-size: 18px;
+            }
             .testimonial-card {
                 min-width: calc(50% - 15px);
                 flex: 0 0 calc(50% - 15px);
@@ -1136,36 +1351,89 @@
                 padding-left: 62px !important;
                 padding-right: 12px;
             }
-            .hero { padding: 60px 0; min-height: 60vh; }
-            .hero h1 { font-size: 28px; }
-            .hero-subtitle { font-size: 18px; }
-            .highlight-box { padding: 20px; }
-            .highlight-box p { font-size: 16px; }
-            .content-section { padding: 40px 0; }
-            .application-form { padding: 25px; }
-            .section-title { font-size: 24px; }
+            .hero {
+                padding: 60px 0;
+                min-height: 60vh;
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            .highlight-box {
+                padding: 20px;
+            }
+            .highlight-box p {
+                font-size: 16px;
+            }
+            .content-section {
+                padding: 40px 0;
+            }
+            .application-form {
+                padding: 25px;
+            }
+            .section-title {
+                font-size: 24px;
+            }
             .testimonial-card {
                 min-width: calc(100% - 20px);
                 flex: 0 0 calc(100% - 20px);
             }
-            .logo-img { height: 40px; }
-            .logo-text { font-size: 20px; }
+            .logo-img {
+                height: 40px;
+            }
+            .logo-text {
+                font-size: 20px;
+            }
         }
         @media (max-width: 576px) {
-            .container { padding: 0 15px; }
-            .hero h1 { font-size: 24px; }
-            .hero-subtitle { font-size: 16px; }
-            .content-section { padding: 30px 0; }
-            .logo-img { height: 35px; }
-            .logo-text { font-size: 18px; }
-            .info-box { padding: 20px; }
-            .highlight-box { padding: 15px; }
-            .highlight-box p { font-size: 15px; }
-            .slider-btn { width: 44px; height: 44px; }
+            .container {
+                padding: 0 15px;
+            }
+            .hero h1 {
+                font-size: 24px;
+            }
+            .hero-subtitle {
+                font-size: 16px;
+            }
+            .content-section {
+                padding: 30px 0;
+            }
+            .logo-img {
+                height: 35px;
+            }
+            .logo-text {
+                font-size: 18px;
+            }
+            .info-box {
+                padding: 20px;
+            }
+            .highlight-box {
+                padding: 15px;
+            }
+            .highlight-box p {
+                font-size: 15px;
+            }
+            .slider-btn {
+                width: 44px;
+                height: 44px;
+            }
         }
         @media (hover: none) and (pointer: coarse) {
-            .submit-btn, .floating-theme, .floating-whatsapp, .floating-language, .floating-phone { min-height: 44px; }
-            .form-control { font-size: 16px; }
+            .submit-btn,
+            .floating-theme,
+            .floating-whatsapp,
+            .floating-language,
+            .floating-phone,
+            .floating-facebook,
+            .floating-instagram,
+            .floating-tiktok {
+                min-height: 44px;
+            }
+            .form-control {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -1224,6 +1492,18 @@
                 <a href="https://wa.me/60106583343" class="floating-whatsapp" target="_blank" id="whatsappButton">
                     <i class="fab fa-whatsapp"></i>
                     <span class="whatsapp-tooltip" id="whatsappTooltip">WhatsApp Kami</span>
+                </a>
+                <a href="https://www.facebook.com/share/1EZKtRs3Lx/" class="floating-facebook" target="_blank" id="facebookButton">
+                    <i class="fab fa-facebook-f"></i>
+                    <span class="facebook-tooltip" id="facebookTooltip">Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/milrwg1?utm_source=qr&igsh=OGlyYmpydGIzN3cx" class="floating-instagram" target="_blank" id="instagramButton">
+                    <i class="fab fa-instagram"></i>
+                    <span class="instagram-tooltip" id="instagramTooltip">Instagram</span>
+                </a>
+                <a href="https://www.tiktok.com/@milrawang" class="floating-tiktok" target="_blank" id="tiktokButton">
+                    <i class="fab fa-tiktok"></i>
+                    <span class="tiktok-tooltip" id="tiktokTooltip">TikTok</span>
                 </a>
                 <a href="tel:+60106583343" class="floating-phone" id="phoneButton">
                     <i class="fas fa-phone"></i>
@@ -1637,11 +1917,13 @@
             const icon = hamburgerBtn.querySelector('i');
             icon.className = sidebarEl.classList.contains('open') ? 'fas fa-times' : 'fas fa-bars';
         }
+
         function closeSidebar() {
             sidebarEl.classList.remove('open');
             overlayEl.classList.remove('open');
             hamburgerBtn.querySelector('i').className = 'fas fa-bars';
         }
+
         function openSidebar() {
             sidebarEl.classList.add('open');
             overlayEl.classList.add('open');
@@ -1722,7 +2004,7 @@
         const themeTooltip = document.getElementById('themeTooltip');
         const themeDropdown = document.getElementById('themeDropdown');
         const themeOptions = document.querySelectorAll('.theme-option');
-        
+
         const themeTranslations = {
             en: { themeTooltip: "Change Theme", lightMode: "Light Mode", darkMode: "Dark Mode", autoMode: "Auto (System)" },
             ms: { themeTooltip: "Tukar Tema", lightMode: "Mod Terang", darkMode: "Mod Gelap", autoMode: "Auto (Sistem)" },
@@ -1794,6 +2076,9 @@
                 whatsappText: "WhatsApp Us",
                 languageTooltip: "Change Language",
                 phoneTooltip: "Call Us",
+                facebookTooltip: "Facebook",
+                instagramTooltip: "Instagram",
+                tiktokTooltip: "TikTok",
                 heroTitle: "PROFESSIONAL FINANCIAL <span>CONSULTATION</span>",
                 heroSubtitle: "We Offer Settlement Services Using Your EPF Contributions",
                 benefit1: "<i class='fas fa-check-circle' style='color: #4CAF50; margin-right: 10px;'></i> No Advance Payment",
@@ -1960,6 +2245,9 @@
                 whatsappText: "WhatsApp Kami",
                 languageTooltip: "Tukar Bahasa",
                 phoneTooltip: "Hubungi Kami",
+                facebookTooltip: "Facebook",
+                instagramTooltip: "Instagram",
+                tiktokTooltip: "TikTok",
                 heroTitle: "PERUNDINGAN KEWANGAN <span>PROFESIONAL</span>",
                 heroSubtitle: "Kami Menawarkan Perkhidmatan Penyelesaian Menggunakan Caruman KWSP Anda",
                 benefit1: "<i class='fas fa-check-circle' style='color: #4CAF50; margin-right: 10px;'></i> Tanpa Bayaran Pendahuluan",
@@ -2126,6 +2414,9 @@
                 whatsappText: "WhatsApp我们",
                 languageTooltip: "更改语言",
                 phoneTooltip: "联系我们",
+                facebookTooltip: "Facebook",
+                instagramTooltip: "Instagram",
+                tiktokTooltip: "TikTok",
                 heroTitle: "专业财务<span>咨询</span>",
                 heroSubtitle: "我们使用您的公积金贡献提供解决方案服务",
                 benefit1: "<i class='fas fa-check-circle' style='color: #4CAF50; margin-right: 10px;'></i> 无需预付款",
@@ -2292,6 +2583,9 @@
                 whatsappText: "WhatsApp எங்களை",
                 languageTooltip: "மொழியை மாற்றவும்",
                 phoneTooltip: "எங்களை அழைக்கவும்",
+                facebookTooltip: "Facebook",
+                instagramTooltip: "Instagram",
+                tiktokTooltip: "TikTok",
                 heroTitle: "தொழில்முறை நிதி <span>ஆலோசனை</span>",
                 heroSubtitle: "உங்கள் EPF பங்களிப்புகளைப் பயன்படுத்தி தீர்வு சேவைகளை வழங்குகிறோம்",
                 benefit1: "<i class='fas fa-check-circle' style='color: #4CAF50; margin-right: 10px;'></i> முன்பணம் இல்லை",
@@ -2485,13 +2779,16 @@
 
         function updateLanguage() {
             const langData = translations[currentLanguage] || translations.en;
-            
+
             // Main page translations
             document.getElementById('modalTitle') && (document.getElementById('modalTitle').textContent = langData.modalTitle);
             document.getElementById('modalNote') && (document.getElementById('modalNote').textContent = langData.modalNote);
             document.getElementById('whatsappTooltip').textContent = langData.whatsappText;
             document.getElementById('languageTooltip').textContent = langData.languageTooltip;
             document.querySelector('.phone-tooltip').textContent = langData.phoneTooltip;
+            document.getElementById('facebookTooltip').textContent = langData.facebookTooltip;
+            document.getElementById('instagramTooltip').textContent = langData.instagramTooltip;
+            document.getElementById('tiktokTooltip').textContent = langData.tiktokTooltip;
             document.getElementById('heroTitle').innerHTML = langData.heroTitle;
             document.getElementById('heroSubtitle').textContent = langData.heroSubtitle;
             document.getElementById('benefit1').innerHTML = langData.benefit1;
@@ -2691,12 +2988,13 @@
             let digits = value.replace(/\D/g, '');
             if (digits.length > 12) digits = digits.substring(0, 12);
             let formatted = digits;
-            if (digits.length > 3) formatted = digits.substring(0,3) + '-' + digits.substring(3,6);
+            if (digits.length > 3) formatted = digits.substring(0, 3) + '-' + digits.substring(3, 6);
             if (digits.length > 6) formatted = formatted + ' ' + digits.substring(6);
             e.target.value = formatted;
             e.target.dataset.rawDigits = digits;
             validatePhoneNumber(phoneInput, phoneError);
         });
+
         function validatePhoneNumber(input, errorEl) {
             const raw = input.dataset.rawDigits || input.value.replace(/\D/g, '');
             const isValid = raw.length >= 9 && raw.length <= 12;
@@ -2716,6 +3014,7 @@
                 return false;
             }
         }
+
         function getFullPhoneNumber(input) {
             const raw = input.dataset.rawDigits || input.value.replace(/\D/g, '');
             return '+6' + raw;
@@ -2729,7 +3028,7 @@
             let digits = value.replace(/\D/g, '');
             if (digits.length > 12) digits = digits.substring(0, 12);
             let formatted = digits;
-            if (digits.length > 3) formatted = digits.substring(0,3) + '-' + digits.substring(3,6);
+            if (digits.length > 3) formatted = digits.substring(0, 3) + '-' + digits.substring(3, 6);
             if (digits.length > 6) formatted = formatted + ' ' + digits.substring(6);
             e.target.value = formatted;
             e.target.dataset.rawDigits = digits;
@@ -2744,7 +3043,7 @@
             let digits = value.replace(/\D/g, '');
             if (digits.length > 12) digits = digits.substring(0, 12);
             let formatted = digits;
-            if (digits.length > 3) formatted = digits.substring(0,3) + '-' + digits.substring(3,6);
+            if (digits.length > 3) formatted = digits.substring(0, 3) + '-' + digits.substring(3, 6);
             if (digits.length > 6) formatted = formatted + ' ' + digits.substring(6);
             e.target.value = formatted;
             e.target.dataset.rawDigits = digits;
@@ -2786,7 +3085,9 @@
             try {
                 const formData = {
                     timestamp: new Date().toISOString(),
-                    nama, telefon, negeri,
+                    nama,
+                    telefon,
+                    negeri,
                     tarikhLahir: tarikhLahir || 'Tidak diisi',
                     simpananKWSP,
                     catatan,
@@ -2795,16 +3096,18 @@
                     language: currentLanguage,
                     theme: currentTheme
                 };
-                await fetch("https://script.google.com/macros/s/AKfycbxkb9W8RZ4yPEeTG3uy3uuUsm6PKw4bSwJeYvbb7JL232dQfz4_2L7i8Oy0cwE3_4B8/exec", {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
-                });
+                await fetch(
+                    "https://script.google.com/macros/s/AKfycbxkb9W8RZ4yPEeTG3uy3uuUsm6PKw4bSwJeYvbb7JL232dQfz4_2L7i8Oy0cwE3_4B8/exec", {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(formData)
+                    });
                 if (typeof fbq !== 'undefined') fbq('track', 'Lead', { content_name: 'Loan Application' });
                 if (typeof ttq !== 'undefined') ttq.track('SubmitForm', { content_name: 'Loan Application' });
 
-                const msg = `*PERMOHONAN PINJAMAN KWSP - MQIRAD*%0A%0A*NAMA:* ${nama}%0A*NO TELEFON:* ${telefon}%0A*NEGERI:* ${negeri}%0A*TARIKH LAHIR:* ${tarikhLahir || 'Tidak diisi'}%0A*SIMPANAN KWSP:* RM${parseInt(simpananKWSP).toLocaleString('ms-MY')}%0A${catatan ? '*CATATAN:* '+catatan : ''}%0A%0A*Permohonan ini dihantar melalui borang atas talian MQIRAD dan telah disimpan ke sistem kami.*`;
+                const msg =
+                    `*PERMOHONAN PINJAMAN KWSP - MQIRAD*%0A%0A*NAMA:* ${nama}%0A*NO TELEFON:* ${telefon}%0A*NEGERI:* ${negeri}%0A*TARIKH LAHIR:* ${tarikhLahir || 'Tidak diisi'}%0A*SIMPANAN KWSP:* RM${parseInt(simpananKWSP).toLocaleString('ms-MY')}%0A${catatan ? '*CATATAN:* ' + catatan : ''}%0A%0A*Permohonan ini dihantar melalui borang atas talian MQIRAD dan telah disimpan ke sistem kami.*`;
                 successMsg.style.display = 'block';
                 successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 setTimeout(() => {
@@ -2817,7 +3120,8 @@
                 }, 2000);
             } catch (error) {
                 errorMsg.style.display = 'block';
-                const msg = `*PERMOHONAN PINJAMAN KWSP - MQIRAD*%0A%0A*NAMA:* ${nama}%0A*NO TELEFON:* ${telefon}%0A*NEGERI:* ${negeri}%0A*TARIKH LAHIR:* ${tarikhLahir || 'Tidak diisi'}%0A*SIMPANAN KWSP:* RM${parseInt(simpananKWSP).toLocaleString('ms-MY')}%0A${catatan ? '*CATATAN:* '+catatan : ''}%0A%0A*Permohonan ini dihantar melalui borang atas talian MQIRAD.*`;
+                const msg =
+                    `*PERMOHONAN PINJAMAN KWSP - MQIRAD*%0A%0A*NAMA:* ${nama}%0A*NO TELEFON:* ${telefon}%0A*NEGERI:* ${negeri}%0A*TARIKH LAHIR:* ${tarikhLahir || 'Tidak diisi'}%0A*SIMPANAN KWSP:* RM${parseInt(simpananKWSP).toLocaleString('ms-MY')}%0A${catatan ? '*CATATAN:* ' + catatan : ''}%0A%0A*Permohonan ini dihantar melalui borang atas talian MQIRAD.*`;
                 setTimeout(() => window.open(`https://wa.me/60106583343?text=${msg}`, '_blank'), 1000);
             } finally {
                 submitBtn.disabled = false;
@@ -2861,7 +3165,9 @@
             try {
                 const formData = {
                     timestamp: new Date().toISOString(),
-                    nama, telefon, negeri,
+                    nama,
+                    telefon,
+                    negeri,
                     tarikhLahir: tarikhLahir || 'Tidak diisi',
                     simpananKWSP,
                     catatan,
@@ -2870,16 +3176,18 @@
                     language: currentLanguage,
                     theme: currentTheme
                 };
-                await fetch("https://script.google.com/macros/s/AKfycbxkb9W8RZ4yPEeTG3uy3uuUsm6PKw4bSwJeYvbb7JL232dQfz4_2L7i8Oy0cwE3_4B8/exec", {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
-                });
+                await fetch(
+                    "https://script.google.com/macros/s/AKfycbxkb9W8RZ4yPEeTG3uy3uuUsm6PKw4bSwJeYvbb7JL232dQfz4_2L7i8Oy0cwE3_4B8/exec", {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(formData)
+                    });
                 if (typeof fbq !== 'undefined') fbq('track', 'Lead', { content_name: 'IRA Loan Application' });
                 if (typeof ttq !== 'undefined') ttq.track('SubmitForm', { content_name: 'IRA Loan Application' });
 
-                const msg = `*PERMOHONAN PINJAMAN KWSP - MQIRAD (IRA)*%0A%0A*NAMA:* ${nama}%0A*NO TELEFON:* ${telefon}%0A*NEGERI:* ${negeri}%0A*TARIKH LAHIR:* ${tarikhLahir || 'Tidak diisi'}%0A*SIMPANAN KWSP:* RM${parseInt(simpananKWSP).toLocaleString('ms-MY')}%0A${catatan ? '*CATATAN:* '+catatan : ''}%0A%0A*Permohonan ini dihantar melalui borang IRA dan telah disimpan ke sistem kami.*`;
+                const msg =
+                    `*PERMOHONAN PINJAMAN KWSP - MQIRAD (IRA)*%0A%0A*NAMA:* ${nama}%0A*NO TELEFON:* ${telefon}%0A*NEGERI:* ${negeri}%0A*TARIKH LAHIR:* ${tarikhLahir || 'Tidak diisi'}%0A*SIMPANAN KWSP:* RM${parseInt(simpananKWSP).toLocaleString('ms-MY')}%0A${catatan ? '*CATATAN:* ' + catatan : ''}%0A%0A*Permohonan ini dihantar melalui borang IRA dan telah disimpan ke sistem kami.*`;
                 successMsg.style.display = 'block';
                 successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 setTimeout(() => {
@@ -2892,7 +3200,8 @@
                 }, 2000);
             } catch (error) {
                 errorMsg.style.display = 'block';
-                const msg = `*PERMOHONAN PINJAMAN KWSP - MQIRAD (IRA)*%0A%0A*NAMA:* ${nama}%0A*NO TELEFON:* ${telefon}%0A*NEGERI:* ${negeri}%0A*TARIKH LAHIR:* ${tarikhLahir || 'Tidak diisi'}%0A*SIMPANAN KWSP:* RM${parseInt(simpananKWSP).toLocaleString('ms-MY')}%0A${catatan ? '*CATATAN:* '+catatan : ''}%0A%0A*Permohonan ini dihantar melalui borang IRA.*`;
+                const msg =
+                    `*PERMOHONAN PINJAMAN KWSP - MQIRAD (IRA)*%0A%0A*NAMA:* ${nama}%0A*NO TELEFON:* ${telefon}%0A*NEGERI:* ${negeri}%0A*TARIKH LAHIR:* ${tarikhLahir || 'Tidak diisi'}%0A*SIMPANAN KWSP:* RM${parseInt(simpananKWSP).toLocaleString('ms-MY')}%0A${catatan ? '*CATATAN:* ' + catatan : ''}%0A%0A*Permohonan ini dihantar melalui borang IRA.*`;
                 setTimeout(() => {
                     window.open(`https://wa.me/60173643224?text=${msg}`, '_blank');
                 }, 1000);
@@ -2938,7 +3247,9 @@
             try {
                 const formData = {
                     timestamp: new Date().toISOString(),
-                    nama, telefon, negeri,
+                    nama,
+                    telefon,
+                    negeri,
                     tarikhLahir: tarikhLahir || 'Tidak diisi',
                     simpananKWSP,
                     catatan,
@@ -2947,16 +3258,18 @@
                     language: currentLanguage,
                     theme: currentTheme
                 };
-                await fetch("https://script.google.com/macros/s/AKfycbxkb9W8RZ4yPEeTG3uy3uuUsm6PKw4bSwJeYvbb7JL232dQfz4_2L7i8Oy0cwE3_4B8/exec", {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
-                });
+                await fetch(
+                    "https://script.google.com/macros/s/AKfycbxkb9W8RZ4yPEeTG3uy3uuUsm6PKw4bSwJeYvbb7JL232dQfz4_2L7i8Oy0cwE3_4B8/exec", {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(formData)
+                    });
                 if (typeof fbq !== 'undefined') fbq('track', 'Lead', { content_name: 'JUJU Loan Application' });
                 if (typeof ttq !== 'undefined') ttq.track('SubmitForm', { content_name: 'JUJU Loan Application' });
 
-                const msg = `*PERMOHONAN PINJAMAN KWSP - MQIRAD (JUJU)*%0A%0A*NAMA:* ${nama}%0A*NO TELEFON:* ${telefon}%0A*NEGERI:* ${negeri}%0A*TARIKH LAHIR:* ${tarikhLahir || 'Tidak diisi'}%0A*SIMPANAN KWSP:* RM${parseInt(simpananKWSP).toLocaleString('ms-MY')}%0A${catatan ? '*CATATAN:* '+catatan : ''}%0A%0A*Permohonan ini dihantar melalui borang JUJU dan telah disimpan ke sistem kami.*`;
+                const msg =
+                    `*PERMOHONAN PINJAMAN KWSP - MQIRAD (JUJU)*%0A%0A*NAMA:* ${nama}%0A*NO TELEFON:* ${telefon}%0A*NEGERI:* ${negeri}%0A*TARIKH LAHIR:* ${tarikhLahir || 'Tidak diisi'}%0A*SIMPANAN KWSP:* RM${parseInt(simpananKWSP).toLocaleString('ms-MY')}%0A${catatan ? '*CATATAN:* ' + catatan : ''}%0A%0A*Permohonan ini dihantar melalui borang JUJU dan telah disimpan ke sistem kami.*`;
                 successMsg.style.display = 'block';
                 successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 setTimeout(() => {
@@ -2969,7 +3282,8 @@
                 }, 2000);
             } catch (error) {
                 errorMsg.style.display = 'block';
-                const msg = `*PERMOHONAN PINJAMAN KWSP - MQIRAD (JUJU)*%0A%0A*NAMA:* ${nama}%0A*NO TELEFON:* ${telefon}%0A*NEGERI:* ${negeri}%0A*TARIKH LAHIR:* ${tarikhLahir || 'Tidak diisi'}%0A*SIMPANAN KWSP:* RM${parseInt(simpananKWSP).toLocaleString('ms-MY')}%0A${catatan ? '*CATATAN:* '+catatan : ''}%0A%0A*Permohonan ini dihantar melalui borang JUJU.*`;
+                const msg =
+                    `*PERMOHONAN PINJAMAN KWSP - MQIRAD (JUJU)*%0A%0A*NAMA:* ${nama}%0A*NO TELEFON:* ${telefon}%0A*NEGERI:* ${negeri}%0A*TARIKH LAHIR:* ${tarikhLahir || 'Tidak diisi'}%0A*SIMPANAN KWSP:* RM${parseInt(simpananKWSP).toLocaleString('ms-MY')}%0A${catatan ? '*CATATAN:* ' + catatan : ''}%0A%0A*Permohonan ini dihantar melalui borang JUJU.*`;
                 setTimeout(() => {
                     window.open(`https://wa.me/60195299218?text=${msg}`, '_blank');
                 }, 1000);
@@ -2988,6 +3302,16 @@
             document.getElementById('phoneButton')?.addEventListener('click', function() {
                 if (typeof fbq !== 'undefined') fbq('track', 'Contact', { contact_channel: 'Phone Call' });
             });
+            // Social media click tracking
+            document.getElementById('facebookButton')?.addEventListener('click', function() {
+                if (typeof fbq !== 'undefined') fbq('track', 'Contact', { contact_channel: 'Facebook' });
+            });
+            document.getElementById('instagramButton')?.addEventListener('click', function() {
+                if (typeof fbq !== 'undefined') fbq('track', 'Contact', { contact_channel: 'Instagram' });
+            });
+            document.getElementById('tiktokButton')?.addEventListener('click', function() {
+                if (typeof fbq !== 'undefined') fbq('track', 'Contact', { contact_channel: 'TikTok' });
+            });
         });
 
         // ===== TESTIMONIAL SLIDER =====
@@ -3003,8 +3327,12 @@
             sliderContainer.style.transform = `translateX(-${currentSlideIdx * 100}%)`;
             dots.forEach((dot, idx) => dot.classList.toggle('active', idx === currentSlideIdx));
         }
-        nextBtn.addEventListener('click', () => { currentSlideIdx = (currentSlideIdx + 1) % totalSlides; updateSlider(); resetInterval(); });
-        prevBtn.addEventListener('click', () => { currentSlideIdx = (currentSlideIdx - 1 + totalSlides) % totalSlides; updateSlider(); resetInterval(); });
+        nextBtn.addEventListener('click', () => { currentSlideIdx = (currentSlideIdx + 1) % totalSlides;
+            updateSlider();
+            resetInterval(); });
+        prevBtn.addEventListener('click', () => { currentSlideIdx = (currentSlideIdx - 1 + totalSlides) % totalSlides;
+            updateSlider();
+            resetInterval(); });
         dots.forEach(dot => dot.addEventListener('click', function() {
             currentSlideIdx = parseInt(this.getAttribute('data-slide'));
             updateSlider();
@@ -3014,6 +3342,7 @@
             currentSlideIdx = (currentSlideIdx + 1) % totalSlides;
             updateSlider();
         }, 5000);
+
         function resetInterval() {
             clearInterval(slideInterval);
             slideInterval = setInterval(() => {
@@ -3021,7 +3350,8 @@
                 updateSlider();
             }, 5000);
         }
-        let touchStart = 0, touchEnd = 0;
+        let touchStart = 0,
+            touchEnd = 0;
         sliderContainer.addEventListener('touchstart', e => touchStart = e.changedTouches[0].screenX);
         sliderContainer.addEventListener('touchend', e => {
             touchEnd = e.changedTouches[0].screenX;
@@ -3043,26 +3373,35 @@
             normal: 'https://i.ibb.co/HTRYMX4k/R-6-removebg-preview.png'
         };
         const holidayDates = {
-            cny: { 2025: { month: 1, day: 29 }, 2026: { month: 2, day: 17 }, 2027: { month: 2, day: 6 }, 2028: { month: 1, day: 26 }, 2029: { month: 2, day: 13 }, 2030: { month: 2, day: 3 } },
-            raya: { 2025: { month: 3, day: 31 }, 2026: { month: 3, day: 20 }, 2027: { month: 3, day: 10 }, 2028: { month: 2, day: 27 }, 2029: { month: 2, day: 15 }, 2030: { month: 2, day: 5 } },
-            deepavali: { 2025: { month: 10, day: 20 }, 2026: { month: 11, day: 8 }, 2027: { month: 10, day: 28 }, 2028: { month: 11, day: 14 }, 2029: { month: 11, day: 3 }, 2030: { month: 10, day: 24 } },
-            christmas: { 2025: { month: 12, day: 25 }, 2026: { month: 12, day: 25 }, 2027: { month: 12, day: 25 }, 2028: { month: 12, day: 25 }, 2029: { month: 12, day: 25 }, 2030: { month: 12, day: 25 } }
+            cny: { 2025: { month: 1, day: 29 }, 2026: { month: 2, day: 17 }, 2027: { month: 2, day: 6 }, 2028: { month: 1,
+                    day: 26 }, 2029: { month: 2, day: 13 }, 2030: { month: 2, day: 3 } },
+            raya: { 2025: { month: 3, day: 31 }, 2026: { month: 3, day: 20 }, 2027: { month: 3, day: 10 }, 2028: { month: 2,
+                    day: 27 }, 2029: { month: 2, day: 15 }, 2030: { month: 2, day: 5 } },
+            deepavali: { 2025: { month: 10, day: 20 }, 2026: { month: 11, day: 8 }, 2027: { month: 10, day: 28 },
+                2028: { month: 11, day: 14 }, 2029: { month: 11, day: 3 }, 2030: { month: 10, day: 24 } },
+            christmas: { 2025: { month: 12, day: 25 }, 2026: { month: 12, day: 25 }, 2027: { month: 12, day: 25 },
+                2028: { month: 12, day: 25 }, 2029: { month: 12, day: 25 }, 2030: { month: 12, day: 25 } }
         };
+
         function getHolidayDate(holiday, year) {
             if (!holidayDates[holiday] || !holidayDates[holiday][year]) return null;
             const { month, day } = holidayDates[holiday][year];
             return new Date(year, month - 1, day);
         }
+
         function isWithinWeek(date, target) {
             return Math.abs(date - target) <= 7 * 24 * 60 * 60 * 1000;
         }
+
         function getSeasonalLogo() {
-            const today = new Date(); today.setHours(0,0,0,0);
-            for (let holiday of ['cny','raya','deepavali','christmas']) {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            for (let holiday of ['cny', 'raya', 'deepavali', 'christmas']) {
                 for (let offset = -1; offset <= 1; offset++) {
                     const year = today.getFullYear() + offset;
                     const hDate = getHolidayDate(holiday, year);
-                    if (hDate) { hDate.setHours(0,0,0,0); if (isWithinWeek(today, hDate)) return holidayLogos[holiday]; }
+                    if (hDate) { hDate.setHours(0, 0, 0, 0);
+                        if (isWithinWeek(today, hDate)) return holidayLogos[holiday]; }
                 }
             }
             return holidayLogos.normal;
